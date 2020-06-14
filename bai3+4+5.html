@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dãy số fibonaci plus</title>
+</head>
+<body>
+<script>
+    function displayFiboList(quantity) {
+        let st1 = 1;
+        let st2 = 1;
+        let count = 2;
+        let sum = st1 + st2;
+        document.write("Dãy số fibonaci: " + st1 + " " + st2);
+        while (count < quantity) {
+            let st3 = st1 + st2;
+            document.write(" " + st3);
+            count++;
+            sum += st3;
+            st1 = st2;
+            st2 = st3;
+        }
+        document.write("<br> Tổng các số trong dãy số fibonaci: " + sum);
+    }
+
+    let number = +prompt("Số các số trong dãy fibonaci");
+    displayFiboList(number);
+
+    function displayDivide(quantity) {
+        let firstnum;
+        for (firstnum =1; firstnum <quantity; firstnum++){
+            if (firstnum %5 == 0){
+                document.write("<br> Số đầu tiên chia hết cho 5 là : "+firstnum);
+                break;
+            }
+        }
+    }
+    displayDivide(number);
+</script>
+</body>
+</html>

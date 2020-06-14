@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tăng giảm nhiệt độ</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập nhiệt độ: ');
+    while (a < 20 || a > 100) {
+        if (a < 20) {
+            alert('Hay tang nhiet do phong:');
+            break;
+        }
+        if (a > 100) {
+            alert('Hay giam nhiet do phong:');
+            break;
+        }
+    }
+    if (20 <= a && a <= 100){
+        alert('Nhiet do phong la: ' + a);
+    }
+</script>
+</body>
+</html>

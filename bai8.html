@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đoán số</title>
+</head>
+<body>
+<button onclick="Start();">Play Game</button>
+<script>
+    function Start() {
+        let numStart = +prompt("Nhập số bắt đầy dãy:");
+        let numEnd = +prompt("Nhập số kết thúc dãy:");
+        let numRandom = Math.floor(Math.random() * (numEnd - numStart + 1) + numStart);
+        while (1) {
+            let numSelect = +prompt("Nhập số bạn dự đoán:");
+            if (numSelect < numRandom) {
+                alert('Hãy chọn số khác lớn hơn để qua Game!');
+            } else if (numSelect > numRandom) {
+                alert('Hãy chọn số khác nhỏ hơn để qua Game!');
+            } else {
+                alert('You Win!');
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

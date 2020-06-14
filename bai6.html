@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tổng 30 số tự nhiên đầu tiên  chia hết cho 7</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let sum = 0;
+    let number = "";
+    for (let i = 1; ; i++){
+        if (i %7 == 0){
+            sum = sum + i;
+            number = number +i + " ";
+            count ++;
+            if (count == 30)
+                break;
+        }
+    }
+    document.write(number + "<br>");
+    document.write("Tong cua day so la: " +sum);
+</script>
+</body>
+</html>
